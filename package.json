@@ -5,7 +5,7 @@
   "main": "conf.js",
   "scripts": {
     "update": "webdriver-manager update",
-    "start": "webdriver-manager start",
+    "server": "webdriver-manager start",
     "test": "protractor conf.js"
   },
   "repository": {

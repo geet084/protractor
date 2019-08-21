@@ -3,5 +3,6 @@
 ### Installation Steps
  - Clone down repo: ```git clone git@github.com:geet084/protractor.git```
  - Install dependencies: ```npm install```
- - Start Selenium Server: ```npm start```
- - For testing suite: ```npm test```
+ - Update Selenium: ```npm run update```
+ - Start Selenium Server: ```npm run server```
+ - For testing suite: ```npm run test```
