@@ -4,7 +4,8 @@
   "description": "A simple example for Protractor",
   "main": "conf.js",
   "scripts": {
-    "start": "webdriver-manager start",
+    "update": "webdriver-manager update",
+    "server": "webdriver-manager start",
     "test": "protractor conf.js"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/geet084/protractor/issues"
   },
-  "homepage": "https://github.com/geet084/protractor#readme"
+  "homepage": "https://github.com/geet084/protractor#readme",
+  "dependencies": {
+    "protractor": "^5.4.2"
+  }
 }
