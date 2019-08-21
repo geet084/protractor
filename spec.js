@@ -39,4 +39,18 @@ describe('Protractor Demo', () => {
 
     expect(browser.getCurrentUrl()).toEqual(expected)
   });
+
+  it('should then go back and click in Turing LinkedIn', () => {
+    const expected = 'https://www.linkedin.com/school/turingschool/'
+    const feeLink = element(by.linkText('Front End Engineering'))
+    const liLink = element.all(by.cssContainingText('.r', 'LinkedIn'))
+
+    searchInput.sendKeys(searchTerm)
+    submitBtn.click()
+    feeLink.click()
+    browser.navigate().back()
+    liLink.click()
+
+    expect(browser.getCurrentUrl()).toEqual(expected)
+  });
 });
