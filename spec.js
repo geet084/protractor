@@ -9,8 +9,9 @@ describe('Protractor Demo', () => {
 
     searchTerm = "Turing School of Software and Design"
     searchInput = element(by.name('q'))
-    const form = element(by.tagName('form')).element(by.tagName('.FPdoLc'))
-    submitBtn = form.element(by.buttonText('Google Search'))
+    submitBtn = element(by.tagName('form'))
+      .element(by.tagName('.FPdoLc'))
+      .element(by.buttonText('Google Search'))
   })
 
   it('should open a Google page', () => {
@@ -26,5 +27,16 @@ describe('Protractor Demo', () => {
     submitBtn.click()
 
     expect(browser.getTitle()).toEqual(expected)
+  });
+
+  it('should click on the front end engineering program link for Turing', () => {
+    const expected = 'https://turing.io/programs/front-end-engineering/'
+    const feeLink = element(by.linkText('Front End Engineering'))
+
+    searchInput.sendKeys(searchTerm)
+    submitBtn.click()
+    feeLink.click()
+
+    expect(browser.getCurrentUrl()).toEqual(expected)
   });
 });
