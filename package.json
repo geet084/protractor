@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/geet084/protractor#readme",
   "dependencies": {
-    "protractor": "^5.4.2"
+    "protractor": "^5.4.4"
   }
 }
